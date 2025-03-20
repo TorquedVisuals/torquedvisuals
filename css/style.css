@@ -1,0 +1,346 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Styles for body*/
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header Content*/
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+nav {
+    display: flex;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #555;
+    border-radius: 5px;
+}
+
+/* Hamburger Menu Style Content */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    font-size: 30px;
+}
+
+/* This will make the regular header dissappear into the hamburger when screen is smaller */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+        /* This shows hamburger menu */
+    }
+
+    nav ul {
+        margin-top: 5%;
+        /*This lays the drop down menu BELOW the hamburger icon*/
+        display: none;
+        /* This will initially hide  thenavigation items */
+        position: absolute;
+        /* This will then position it below the hamburger button */
+        top: 40px;
+        /* This will adjust this value to control how far below the hamburger menu appears */
+        left: 60%;
+        /*This positions the drop down to the side I want it to rather than it taking up the whole screen*/
+        width: 40%;
+        /*This positions the drop down to the side I want it to rather than it taking up the whole screen*/
+        background-color: #333;
+        border-radius: 5px;
+
+    }
+
+
+    nav ul.active {
+        display: block;
+        /* This shows the menu */
+    }
+
+    nav ul li {
+        list-style: none;
+    }
+
+    nav ul li a {
+        color: white;
+        text-decoration: none;
+        padding: 10px 15px;
+        display: block;
+    }
+
+    nav ul li a:hover {
+        background-color: #555;
+        /* This creates an animation, it changes color when hovered above!*/
+    }
+}
+
+/* Bio Header Content */
+.bio-header {
+    background-color: #fff;
+    text-align: center;
+    padding: 40px 20px;
+    margin-bottom: 30px;
+}
+
+.bio-header h1 {
+    margin-bottom: 10px;
+}
+
+.bio-header p {
+    color: #666;
+}
+
+/* Main Section Content */
+main {
+    padding: 40px 20px;
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    /* This will allow the content to wrap */
+}
+
+/*About Author and Equipment Content*/
+
+.about-author-work {
+    padding: 40px 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+    margin-bottom: 30px;
+}
+
+
+
+/* Author Equipment Section Content */
+.author-equipment {
+    padding: 30px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+    margin-bottom: 30px;
+}
+
+/* This is for my hover effect */
+.about-author-work:hover,
+.author-equipment:hover {
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+/* About Author Section Content */
+.about-author {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 3;
+}
+
+.about-author h2 {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.author-info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: flex-start;
+}
+
+.profile-pic {
+    width: 214px;
+    height: 214px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.bio-text h3 {
+    color: #333;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.bio-text p {
+    color: #666;
+    line-height: 1.8;
+    text-align: left;
+}
+
+/* Advertisement Sidebar Content */
+.advertisement-sidebar {
+    display: flex;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.advertisement {
+    align-items: center;
+    width: 200px;
+    border-radius: 50;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+}
+
+
+.advertisement h3 {
+    text-align: left;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.advertisement p {
+    text-align: left;
+    color: #555;
+    line-height: 1.6;
+    display: block;
+}
+
+
+
+/* Gallery styles Content */
+.photo-gallery {
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* Below I have established a row for a horizontally scrolling gallery */
+
+.gallery-row {
+    display: flex;
+    gap: 20px;
+
+    overflow-x: hidden;
+    /* This will hide the horizontal scrollbar */
+    width: 100%;
+
+}
+
+.gallery-row .photo {
+    flex-shrink: 0;
+    width: 200px;
+    height: 200px;
+}
+
+.gallery-row img {
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+}
+
+.gallery-slider {
+    width: 100%;
+    margin-top: 10px;
+    -webkit-appearance: none;
+    appearance: none;
+    height: 5px;
+    background: #ddd;
+    border-radius: 5px;
+    outline: none;
+}
+
+.gallery-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    height: 20px;
+    width: 20px;
+    background: #333;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.gallery-slider::-moz-range-thumb {
+    height: 20px;
+    width: 20px;
+    background: #333;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.gallery-row {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/* This adds a hover effect for the photos, I love my hover effects */
+.gallery-row .photo:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+
+/* Footer Content */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+footer a {
+    color: #00b0ff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* This makes the design responsive */
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .about-author,
+    .advertisement-sidebar {
+        width: 100%;
+        padding: 15px;
+
+    }
+
+    .author-info {
+        flex-direction: column;
+        text-align: center;
+    }
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lauren Glor's Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Lauren Glor's Portfolio</h1>
+        <nav>
+            <div class="hamburger">☰</div>
+            <ul>
+                <li><a href="autobiography.html" class="nav-link">About Author</a></li>
+                <li><a href="aboutwork.html" class="nav-link">About Equipment and Style Used</a></li>
+                <li><a href="gallery.html" class="nav-link">Photo Gallery</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- The above section links the nav bar to having three tabs, the Home, the About, and the Photo Gallery-->
+    <main>
+        <section class="about-author-work">
+            <h2>About the Author's Work</h2>
+            <p>Lauren Glor’s work goes beyond mere documentation of the physical world; it captures the soul of her
+                subjects. Her keen eye for subtle details allows her to uncover beauty in unexpected places,
+                transforming everyday moments into powerful visual experiences. Whether she’s photographing nature,
+                architecture, or human interactions, Lauren approaches each scene with a sense of discovery, constantly
+                seeking out new perspectives to present familiar subjects in fresh and intriguing ways. Her ability to
+                find beauty in the smallest elements—like the reflection of light on a surface or the way a shadow
+                falls—sets her apart as a true visual storyteller.
+
+                Her portfolio reflects a diverse range of styles, from meticulously composed still life images to candid
+                street photography that invites viewers to feel as though they’ve been transported into the moment.
+                Through her work, Lauren aims to create an emotional connection, allowing her audience to not only
+                admire the technical precision of her photographs but also to feel the atmosphere and energy she
+                captures. Each image serves as a testament to her dedication to both the art of photography and the
+                stories she strives to tell. By always pushing her creative boundaries, Lauren ensures her work remains
+                fresh, exciting, and thought-provoking.</p>
+        </section>
+
+        <section class="author-equipment">
+            <h2>About the Author's Equipment</h2>
+            <p>Lauren uses primarily Canon products, including her Canon T5, T8i, and Canon Powershot, relying on their
+                high-quality performance for both photography and videography. She appreciates the clarity and detail
+                Canon cameras offer, allowing her to capture the finest nuances in every shot, from the sharpness of a
+                subject's features to the subtle gradation of light in a scene. For videography, she uses a DJI Osmo 3,
+                a versatile tool that ensures smooth, cinematic footage even in motion. This stabilizer has become an
+                essential part of her kit, enabling her to produce professional-level videos with a fluid, polished
+                look, regardless of the environment. The portability and ease of use of the Osmo 3 make it perfect for
+                capturing spontaneous moments while maintaining the high visual standards that Lauren strives for in her
+                work. The combination of these trusted tools empowers Lauren to consistently deliver dynamic,
+                high-quality content, whether shooting stills or videos.</p>
+        </section>
+    </main>
+    <!-- Above, I created two sections for filler space about the author-->
+    <footer>
+        <p>Contact me at <a href="mailto:torquedvisuals@gmail.com">torquedvisuals@gmail.com</a></p>
+    </footer>
+    <!-- Above creates my footer-->
+    <script>
+
+        document.querySelector('.hamburger').addEventListener('click', function () {
+            document.querySelector('nav ul').classList.toggle('active');
+
+        });
+
+    </script>
+    <!-- The script above is to create my hamburger menu when the page is shrunk!-->
+</body>
+
+</html>
